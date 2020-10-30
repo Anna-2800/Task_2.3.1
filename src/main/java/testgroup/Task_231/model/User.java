@@ -2,6 +2,7 @@ package testgroup.Task_231.model;
 
 import javax.annotation.Generated;
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "users")
