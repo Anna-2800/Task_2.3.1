@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import testgroup.Task_231.model.User;
 import testgroup.Task_231.service.UserService;
-import testgroup.Task_231.service.UserServiceImpl;
-
 import java.util.List;
 
 @Controller
@@ -35,6 +33,9 @@ public class UserController {
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
     public ModelAndView editPage(@PathVariable("id") int id){
         User user = userService.getById(id);
+
+        System.out.println(user);
+
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("editPage");
         modelAndView.addObject("user", user);
