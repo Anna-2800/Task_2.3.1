@@ -60,7 +60,6 @@ public class UsersController {
     @RequestMapping(value="/delete/{id}", method = RequestMethod.GET)
     public String deleteUser(@PathVariable("id") int id) {
         userService.delete(userService.getById(id));
-        System.out.println("sdv");
         return "redirect:/users";
     }
 
